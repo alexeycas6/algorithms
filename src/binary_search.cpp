@@ -1,8 +1,6 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;
-
 class solution {
 private:
     bool good(int val, int target) { return val <= target; }
@@ -12,7 +10,7 @@ private:
      * good:  t t t t f f
      */
 public:
-    int binary_search(const vector<int>& nums, int target) {
+    int binary_search(const std::vector<int>& nums, int target) {
         int left = -1;
         int right = nums.size();
 
@@ -24,7 +22,7 @@ public:
                 right = middle;
         }
 
-        if (nums[left] == target)
+        if (!nums.empty() && nums[left] == target)
             return left;
         else
             return -1;
