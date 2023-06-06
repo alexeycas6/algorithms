@@ -22,7 +22,7 @@ public:
                 right = middle;
         }
 
-        if (!nums.empty() && nums[left] == target)
+        if (left > -1 && nums[left] == target)
             return left;
         else
             return -1;
@@ -34,7 +34,7 @@ int main() {
     int target = 7;
 
     solution s;
-    auto idx = s.binary_search(nums, 7);
+    auto idx = s.binary_search(nums, target);
     std::cout << idx << " ";
 
     return 0;
