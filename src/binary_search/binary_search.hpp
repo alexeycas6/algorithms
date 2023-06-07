@@ -1,14 +1,14 @@
 #include <vector>
 
 class binary_search {
-    static bool good(int val, int target) { return val <= target; }
+    static bool good(int val, int target) noexcept { return val <= target; }
     /*
      * array: 1 2 4 7 9 15
      * target: 7
      * good:  t t t t f f
      */
 public:
-    static int find(const std::vector<int>& nums, int target) {
+    static int find(const std::vector<int>& nums, int target) noexcept {
         int left = -1;
         int right = nums.size();
 
