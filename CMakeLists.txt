@@ -9,5 +9,6 @@ set(SOURCES_DIR ${CMAKE_SOURCE_DIR}/src)
 
 add_subdirectory(${SOURCES_DIR}/binary_search)
 add_subdirectory(${SOURCES_DIR}/lru_cache)
-			   
+add_subdirectory(${SOURCES_DIR}/lock_free_stack)
+
 #target_include_directories(${PROJECT_NAME} PRIVATE ${SOURCES_DIR})
